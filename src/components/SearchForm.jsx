@@ -2,6 +2,7 @@ import { useState } from "react";
 const SearchForm=({onSearch})=>{
     const [searchStr,setSearchStr] = useState("");
     const [searchOption,setSearchOption]=useState('shows');
+    console.log(searchOption);
 
     const onSearchInputChange=(e)=>{
         setSearchStr(e.target.value)
