@@ -1,4 +1,4 @@
-import { useParams,Link } from "react-router-dom";
+import { useParams,Link,useNavigate} from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { getShowById } from "../api/tvmaze";
 import ShowMainData from "../components/shows/ShowMainData";
@@ -13,14 +13,22 @@ const Show=()=>{
         refetchOnWindowFocus:false,
     });
 
+    const navigateTo=useNavigate();
+   const onGoBack=()=>{
+       navigateTo('/');
+   }
+
    if(showError){
     return (
         <div>We have an error {showError.message}</div>
     )
    }
+
+   
    if(showData){
     return(
         <div>
+           <button type="buttom" onClick={onGoBack}>Go Back To Home</button>
             <ShowMainData
                 image={showData.image}
                 name={showData.name}
