@@ -4,7 +4,8 @@ import Apptitle from "./AppTitle";
 const Mainlayout=()=>{
     return(
         <div>
-            <Apptitle />
+            <Apptitle/>
+            
             <Navs/>
             <Outlet/>
         </div>

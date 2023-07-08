@@ -22,9 +22,15 @@ const SearchForm=({onSearch})=>{
     }
 
    return (
-    <form onSubmit={onSubmit}>
-                <input type="text" value={searchStr} onChange={onSearchInputChange}/>
-
+    <form onSubmit={onSubmit} style={{border: "5px #ffa502 solid",
+        margin: "auto",
+        width: "50vw",
+        padding: "10px",
+        backgroundColor:"#fff200",
+        fontFamily:"cursive"
+        }}>
+                <input type="text" value={searchStr} onChange={onSearchInputChange} style={{width:"50vw",height:"5vh",fontSize:"4vh"}}/>
+                
                 <label>
                     Shows
                     <input type="radio" name="search-option" value="shows" checked={searchOption === 'shows'} onChange={onRadioChange}/>
@@ -33,7 +39,7 @@ const SearchForm=({onSearch})=>{
                     Actors
                     <input type="radio" name="search-option" value="actors" checked={searchOption === 'actors'} onChange={onRadioChange}/>
                 </label>
-                <button type="submit">Search</button>
+                <button type="submit" style={{marginLeft:"36vw",backgroundColor:"blue",color:"white"}}><img src="../assets/search.png" alt="Search"/></button>
     </form>
    )
 }

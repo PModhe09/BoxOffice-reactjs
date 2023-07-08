@@ -55,7 +55,7 @@ const Home=()=>{
     }
 
     return(
-        <div>
+        <div style={{backgroundColor:"#ff4d4d"}}>
             <SearchForm onSearch={onSearch}/>
             <div>{renderApiData()}</div>
         </div>
