@@ -1,10 +1,10 @@
-import { useParams,Link,useNavigate} from "react-router-dom";
+import { useParams,useNavigate} from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { getShowById } from "../api/tvmaze";
 import ShowMainData from "../components/shows/ShowMainData";
 import Details from "../components/shows/Details";
-import Seasons from "../components/shows/Seasons";
-import Cast from "../components/shows/Cast";
+// import Seasons from "../components/shows/Seasons";
+// import Cast from "../components/shows/Cast";
 const Show=()=>{
     const {showId} = useParams();
 

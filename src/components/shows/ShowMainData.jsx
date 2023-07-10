@@ -12,6 +12,7 @@ const ShowMainData=({image,name,rating,summary,genres})=>{
                 {genres.map(genre=>(
                     <span key={genre}>{genre}</span>
                 ))}
+                {summary}
             </div>
           </div>
         </div>
